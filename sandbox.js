@@ -38,3 +38,12 @@ console.log(list)
 let value = 200
 console.log(Number('100')+ value)     // works
 console.log(typeof value)
+
+// labels - only search for lableName above the break/continue labelName statement
+
+outerlabel: for (let index = 0; index < 10; index++) {
+    for (let index2 = 0; index2 < 10; index2++) {
+        console.log(`index1 - ${index}, index2 ${index2}`);
+        continue outerlabel;       
+    }
+}
