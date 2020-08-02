@@ -95,6 +95,11 @@ document.getElementById('browser').oninput = function () {
 
 // we can call funcs of func exprs as a
 // parameter of another func - called callbacks
+
+// declared funcs can be called before they are declared
+
+// func exprs cant, but they can be used outside and a
+// their blocks as they are variables
 let callbacks = function (question, yes, no){
     if(confirm(question)) yes()
     else no()
@@ -105,4 +110,23 @@ let showTrue = function(){
 }
 let showFalse = function(){
     document.getElementById('result-2').innerHTML = 'you cancelled'
+}
+
+// ======================================================================
+// arrow functions - single line 
+// multi line with curly brackets
+let name = n => n*2         //one argument n
+let sayHi = () => 'hello'   //no argument
+let sayHello = () =>{
+    return 'hi'
+}
+
+console.log(name(2))
+console.log(sayHi())
+console.log(sayHello())
+
+let multiply= () =>{
+    a = document.getElementById('in').value
+    b = document.getElementById('in-1').value
+    document.getElementById('result-3').innerHTML = a*b
 }
