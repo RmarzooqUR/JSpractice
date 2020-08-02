@@ -94,4 +94,15 @@ document.getElementById('browser').oninput = function () {
 // the inner variable is used
 
 // we can call funcs of func exprs as a
-// parameter of another func
+// parameter of another func - called callbacks
+let callbacks = function (question, yes, no){
+    if(confirm(question)) yes()
+    else no()
+}
+
+let showTrue = function(){
+    document.getElementById('result-2').innerHTML = 'you confirmed yes'
+}
+let showFalse = function(){
+    document.getElementById('result-2').innerHTML = 'you cancelled'
+}
