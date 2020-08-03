@@ -117,13 +117,13 @@ let showFalse = function(){
 // multi line with curly brackets
 let name = n => n*2         //one argument n
 let sayHi = () => 'hello'   //no argument
-let sayHello = () =>{
+let sayHello = (a,b) =>{    //with arguments
     return 'hi'
 }
 
 console.log(name(2))
 console.log(sayHi())
-console.log(sayHello())
+console.log(sayHello(10,20))
 
 let multiply= () =>{
     a = document.getElementById('in').value
