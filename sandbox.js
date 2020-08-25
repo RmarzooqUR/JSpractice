@@ -113,7 +113,7 @@ let showFalse = function(){
 }
 
 // ======================================================================
-// arrow functions - single line 
+// arrow functions - single line - dont have their own this, therefore better use in classes
 // multi line with curly brackets
 let name = n => n*2         //one argument n
 let sayHi = () => 'hello'   //no argument

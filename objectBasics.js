@@ -22,7 +22,7 @@ console.log(copy)
 
 // this & new 
 // this is evaluated at runtime and is not bound i.e. it can take the value of the object it resides n
-
+// objects are always truthy - [ if(0) -false but if(new Number(0)) -true]
 function User(name){
     this.name = name;
     this.isAdmin = false;
@@ -39,3 +39,6 @@ let current = new User('Allo')
 current.isAdminFunc = isAdminFunc;
 console.log(current)
 console.log(current.isAdminFunc())
+
+// primitives also have methods like string.toUpperCase and num.toFixed(n)
+// null and undefined have no methods
