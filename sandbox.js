@@ -130,3 +130,44 @@ let multiply= () =>{
     b = document.getElementById('in-1').value
     document.getElementById('result-3').innerHTML = a*b
 }
+
+
+
+
+// =================================================
+// JS Closure
+// =================================================
+// js closure is when an inner function can acces its surrounding state
+// or lexical scope even after the outer function has returned
+
+// used to emulate private methods and variables (with IIFE - immediately invoked fun expr)
+
+let outerFunc = function(){
+	let privateVar = 0
+	let privateMethod = (add) => privateVar += add;
+
+	return {
+		increment: function(){
+			privateMethod(1)	
+		},
+		decrement: function(){
+			privateMethod(-1)
+		} ,
+		value : function (){return privateVar;}
+	}
+};
+
+counter = outerFunc();		//counter is now instance of outerFunc
+
+// also
+let addN = (a) => {
+	return function(b){
+		return a+b
+	}
+}
+
+let add5 = addN(5)
+console.log(add5(2))
+
+let add10 = addN(10)
+console.log(add10(21))
