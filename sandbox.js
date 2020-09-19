@@ -171,3 +171,26 @@ console.log(add5(2))
 
 let add10 = addN(10)
 console.log(add10(21))
+
+// event loop resides between stack and the task queue 
+// and pushes any task in the task queue when the stack is empty
+
+/*
+
+__________					_________
+|		  | 				|		|		
+|		  | <-event	->		|task	|
+|Stack	  |   loop			|queue	|
+|		  | 				|		|
+|		  | 				|		|
+----------					---------
+
+__________
+|		  |
+|browser  |
+|web	  |
+|api	  |
+|		  |
+----------
+
+/*
