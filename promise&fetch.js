@@ -39,3 +39,17 @@ let newProm = new Promise((resolve,reject) => {
 ;
 
 // ---------------------------------------------------------------------------
+async function showAvater(){
+	let response = await fetch('https://api.github.com/users/rmarzooqur/following')
+	avatars = await response.json()
+
+	for (avatar of avatars){
+		let image = document.createElement('img')
+		image.src = avatar.avatar_url
+		document.body.append(image)
+	}
+	return avatar
+}
+
+showAvater() // returns a promise and await is alternative to .then
+// ----------------------------------------------------------------------------
