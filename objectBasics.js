@@ -42,3 +42,17 @@ console.log(current.isAdminFunc())
 
 // primitives also have methods like string.toUpperCase and num.toFixed(n)
 // null and undefined have no methods
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ES6 Computed property names
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// use [expression] to set the expression as a property name
+
+let i=0;
+let obj = {
+    ['foo'+ ++i]:i,
+    ['foo'+ ++i]:i,
+    ['foo'+ ++i]:i,
+    ['foo'+ ++i]:i,
+    ['foo'+ ++i]:i,
+}
